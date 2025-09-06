@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Marketing Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #000000;
+            background-color: #ffffff;
+        }
+        .bg-primary {
+            background-color: #FFDE00;
+        }
+        .text-primary {
+            color: #FFDE00;
+        }
+        .bg-card {
+            background-color: #f5f5f5;
+        }
+        .text-black {
+            color: #000000;
+        }
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        .carousel {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            animation: infinite-scroll 25s linear infinite;
+        }
+        .carousel img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            flex-shrink: 0;
+            display: inline-block;
+            margin: 0 5px;
+            border-radius: 10px;
+        }
+
+        @keyframes infinite-scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+        .header-bg {
+            background-image: url('https://bostoncred.com.ar/wp-content/uploads/2025/09/Banner-scaled.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 1;
+            height: 400px; /* Ajusta la altura del header para que la imagen se vea completa */
+        }
+        .header-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+
+    <!-- Header Section -->
+    <header class="header-bg py-16 px-4 text-center rounded-b-xl shadow-lg">
+        <div class="header-content">
+            <h1 class="text-4xl md:text-5xl font-bold mb-2 text-black">Tu Agencia de Marketing Digital</h1>
+            <p class="text-lg md:text-xl text-black">Impulsamos tu marca al siguiente nivel.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16">
+
+        <!-- Services Section -->
+        <section class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">Nuestros Servicios</h2>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-700">Ofrecemos soluciones de marketing digital personalizadas para ayudarte a alcanzar tus objetivos de negocio.</p>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Service Card 1: Campañas de Ads -->
+            <div class="bg-card p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div class="flex justify-center mb-6">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/Campanas.png" alt="Icono de Campañas de Ads" class="w-48 h-auto rounded-lg">
+                </div>
+                <h3 class="text-2xl font-bold text-primary mb-2">Campañas de Ads</h3>
+                <p class="text-base text-gray-700">
+                    Creamos y optimizamos campañas de publicidad en **Meta (Facebook e Instagram), Google, TikTok y LinkedIn Ads** para maximizar tu alcance y retorno de inversión.
+                </p>
+            </div>
+
+            <!-- Service Card 2: Email Marketing -->
+            <div class="bg-card p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div class="flex justify-center mb-6">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/Email.png" alt="Icono de Email Marketing" class="w-48 h-auto rounded-lg">
+                </div>
+                <h3 class="text-2xl font-bold text-primary mb-2">Email Marketing</h3>
+                <p class="text-base text-gray-700">
+                    Diseñamos estrategias de email marketing efectivas. Gestionamos tus campañas en plataformas como **Doppler, Emblue y Mailchimp** para mantener a tu audiencia comprometida.
+                </p>
+            </div>
+
+            <!-- Service Card 3: Gestión de Redes Sociales -->
+            <div class="bg-card p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div class="flex justify-center mb-6">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/Social.png" alt="Icono de Gestión de Redes Sociales" class="w-48 h-auto rounded-lg">
+                </div>
+                <h3 class="text-2xl font-bold text-primary mb-2">Gestión de Redes Sociales</h3>
+                <p class="text-base text-gray-700">
+                    Desarrollamos contenido atractivo y gestionamos tus perfiles en **Facebook, Instagram y TikTok** para construir una comunidad sólida y aumentar la visibilidad de tu marca.
+                </p>
+            </div>
+        </div>
+
+        <!-- Carousel Section -->
+        <section class="mt-16 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-primary">Nuestros Proyectos</h2>
+            <div class="carousel-container">
+                <div class="carousel" id="image-carousel">
+                    <!-- Se duplican las imágenes para el efecto de carrusel infinito -->
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/22.png" alt="Imagen 1 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/23.png" alt="Imagen 2 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/10.png" alt="Imagen 3 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/12.png" alt="Imagen 4 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/1.png" alt="Imagen 5 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/2.png" alt="Imagen 6 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/3.png" alt="Imagen 7 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/4.png" alt="Imagen 8 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/5.png" alt="Imagen 9 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/6.png" alt="Imagen 10 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/7.png" alt="Imagen 11 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/8.png" alt="Imagen 12 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/9.png" alt="Imagen 13 del Carrusel">
+                    <!-- Las imágenes se duplican para el efecto de carrusel infinito -->
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/22.png" alt="Imagen 1 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/23.png" alt="Imagen 2 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/10.png" alt="Imagen 3 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/12.png" alt="Imagen 4 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/1.png" alt="Imagen 5 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/2.png" alt="Imagen 6 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/3.png" alt="Imagen 7 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/4.png" alt="Imagen 8 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/5.png" alt="Imagen 9 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/6.png" alt="Imagen 10 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/7.png" alt="Imagen 11 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/8.png" alt="Imagen 12 del Carrusel">
+                    <img src="https://bostoncred.com.ar/wp-content/uploads/2025/09/9.png" alt="Imagen 13 del Carrusel">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="bg-card py-16 px-4 rounded-xl shadow-lg mb-12 container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">Sobre Nosotros</h2>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-700">
+                Somos un equipo de expertos dedicados a potenciar tu presencia online. Con un enfoque en la innovación y resultados medibles, ayudamos a marcas a crecer y conectar con su audiencia de forma significativa.
+            </p>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="container mx-auto px-4 py-16 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">Lo que Dicen Nuestros Clientes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-card p-6 rounded-2xl shadow-xl">
+                    <p class="italic text-gray-700 mb-4">"Desde que empezamos a trabajar con ellos, nuestras ventas se han duplicado. Su enfoque estratégico en campañas de ads es inigualable."</p>
+                    <p class="font-bold text-primary">- Juan P., Dueño de Negocio</p>
+                </div>
+                <div class="bg-card p-6 rounded-2xl shadow-xl">
+                    <p class="italic text-gray-700 mb-4">"La gestión de nuestras redes sociales ha mejorado radicalmente. El contenido es creativo y hemos visto un gran aumento en la interacción."</p>
+                    <p class="font-bold text-primary">- María L., Gerente de Marketing</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="bg-primary py-16 px-4 rounded-t-xl shadow-lg container mx-auto mb-12">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-black">Contacta con Nosotros</h2>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto text-black">¿Listo para potenciar tu marca? ¡Hablemos!</p>
+            </div>
+            <div class="bg-card p-8 rounded-2xl shadow-xl max-w-lg mx-auto">
+                <form action="https://formsubmit.co/belinifacundo@gmail.com" method="POST">
+                    <!-- Campos para FormSubmit -->
+                    <input type="hidden" name="_subject" value="Nuevo contacto desde la página web!">
+                    <input type="hidden" name="_next" value="https://google.com">
+                    
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 mb-2">Nombre</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 rounded-lg bg-gray-100 text-black border border-gray-300 focus:outline-none focus:border-primary" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 rounded-lg bg-gray-100 text-black border border-gray-300 focus:outline-none focus:border-primary" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 mb-2">Mensaje</label>
+                        <textarea id="message" name="message" rows="4" class="w-full p-3 rounded-lg bg-gray-100 text-black border border-gray-300 focus:outline-none focus:border-primary" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-black font-bold py-3 rounded-lg hover:bg-yellow-400 transition-colors duration-300">
+                        Enviar Mensaje
+                    </button>
+                    <p class="text-center text-xs text-gray-500 mt-2">
+                        *El primer envío requiere una verificación por email. Revisa tu bandeja de entrada o spam.
+                    </p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-primary py-8 text-center rounded-t-xl shadow-inner text-black">
+        <p class="text-sm md:text-base">&copy; 2025 Agencia de Marketing Digital. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
